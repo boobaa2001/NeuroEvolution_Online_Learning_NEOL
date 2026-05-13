@@ -1,0 +1,5 @@
+gymnasium[box2d,mujoco]
+imageio
+neat-python
+numpy
+pandas
