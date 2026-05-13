@@ -1,7 +1,7 @@
 # NEOL
 
-NEOL is a small experiment runner for comparing standard NEAT against
-reward-modulated online plasticity rules on Gymnasium control tasks.
+NEOL is experiment runner for comparing standard NEAT against
+NEOL on Gymnasium control tasks.
 
 The current rule set is:
 
