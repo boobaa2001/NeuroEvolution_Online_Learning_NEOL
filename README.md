@@ -155,6 +155,29 @@ architectures.
 On Windows, run experiments through `python main.py ...` from the repository
 root so multiprocessing workers can import the project correctly.
 
+## RL Baselines
+
+This repository also includes `benchmark_suite.py`, a standard reinforcement
+learning baseline runner for comparing NEOL against PPO and SAC.
+
+The RL baselines use Stable Baselines JAX (`sbx`) and Gymnasium environments.
+Each benchmark runs multiple seeds, logs per-episode rewards and lengths, and
+writes aggregated learning curves and summary statistics under `runs/`.
+
+Default RL baseline tasks:
+
+| Gymnasium environment | Algorithms | Seeds | Timesteps |
+| --- | --- | ---: | ---: |
+| `CartPole-v1` | PPO | 5 | 150,000 |
+| `LunarLanderContinuous-v3` | PPO, SAC | 5 | 150,000 |
+| `BipedalWalker-v3` | PPO, SAC | 5 | 150,000 |
+| `Hopper-v4` | PPO, SAC | 5 | 150,000 |
+
+Run all RL baselines:
+
+```bash
+python benchmark_suite.py
+
 ## License
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE).
